@@ -1,3 +1,3 @@
-module github.com/dharsan-0111/personal-dashboard-backend
+module personal-dashboard-backend
 
 go 1.24.0
