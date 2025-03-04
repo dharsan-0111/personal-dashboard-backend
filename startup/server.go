@@ -1,7 +1,7 @@
-package startup
+// package startup
 
-import "fmt"
+// import "fmt"
 
-func StartServer() {
-    fmt.Println("Server is starting...")
-}
+// func StartServer() {
+//     fmt.Println("Server is starting...")
+// }
