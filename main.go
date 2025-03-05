@@ -9,6 +9,8 @@ import (
 
 func main() {
 	fmt.Println("Starting server...")
+	db.InitRedis()
+	fmt.Println("Initialised redis")
 	db.ConnectDB()
 	fmt.Println("Connected to database")
 

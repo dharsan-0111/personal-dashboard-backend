@@ -1,12 +1,21 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"personal-dashboard-backend/middleware"
+
+	"github.com/gin-gonic/gin"
+)
 
 func SetUpRoutes() *gin.Engine {
 	r := gin.Default()
 	
 	AuthRoutes(r)
-	UserRoutes(r)
+
+	protected := r.Group("/user")
+	protected.Use(middleware.AuthMiddleware())
+	{
+		UserRoutes(protected)
+	}
 
 	return r
 }

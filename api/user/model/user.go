@@ -16,3 +16,12 @@ type User struct {
     UpdatedAt time.Time      `gorm:"default:CURRENT_TIMESTAMP"`
     DeletedAt gorm.DeletedAt `gorm:"index"`
 }
+
+type LoginRequest struct {
+    Email string `json:"email" binding:"required"`
+    Password string `json:"password" binding:"required"`
+}
+
+type LoginResponse struct {
+    Token string `json:"token"`
+}
